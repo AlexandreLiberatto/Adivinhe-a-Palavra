@@ -1,0 +1,6 @@
+.App {
+    display: flex; /* Essa formatação alinha tudo no centro da tela */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

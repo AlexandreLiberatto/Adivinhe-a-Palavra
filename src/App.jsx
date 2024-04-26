@@ -5,7 +5,7 @@ function App() {
   
 
   return (
-   <div>
+   <div className='App'>
        <h2>Adivinhe a Palavra</h2>
    </div>
   )
