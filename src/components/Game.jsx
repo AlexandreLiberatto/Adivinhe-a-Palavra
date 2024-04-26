@@ -15,7 +15,7 @@ const Game = ({
   const letterInputRef = useRef(null);
 
   const handleSubmit = (e) => {
-    e.preventDefalt();
+    e.preventDefault();
 
     verifyLetter(letter);
 
@@ -27,7 +27,7 @@ const Game = ({
   return (
     <div className="game">
       <p className="points">
-        <span>Ponução: {score}</span>
+        <span>Pontução: {score}</span>
       </p>
       <h1>Adivinhe a palavra:</h1>
       <h3 className="tip">
