@@ -1,3 +1,5 @@
+
+import PropTypes from 'prop-types';
 import "./GameOver.css";
 
 const GameOver = ({ retry, score }) => {
@@ -10,6 +12,11 @@ const GameOver = ({ retry, score }) => {
       <button onClick={retry}>Reiniciar</button>
     </div>
   );
+};
+
+GameOver.propTypes = {
+  retry: PropTypes.func.isRequired,
+  score: PropTypes.number.isRequired,
 };
 
 export default GameOver;

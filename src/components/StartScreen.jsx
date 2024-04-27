@@ -1,6 +1,8 @@
+
+import PropTypes from 'prop-types';
 import "./StartScreen.css";
 
-const GameStart = ({ startGame }) => {
+const StartScreen = ({ startGame }) => {
   return (
     <div className="start">
       <h1>Secret Word</h1>
@@ -10,4 +12,8 @@ const GameStart = ({ startGame }) => {
   );
 };
 
-export default GameStart;
+StartScreen.propTypes = {
+  startGame: PropTypes.func.isRequired,
+};
+
+export default StartScreen;

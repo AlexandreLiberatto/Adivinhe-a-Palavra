@@ -1,12 +1,10 @@
-import { useState, useRef } from "react";
-
-// styles
+import { useState, useRef } from 'react';
+import PropTypes from 'prop-types';
 import "./Game.css";
 
 const Game = ({
   verifyLetter,
   pickedCategory,
-  pickedWord,
   letters,
   guessedLetters,
   wrongLetters,
@@ -18,11 +16,8 @@ const Game = ({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     verifyLetter(letter);
-
     setLetter("");
-
     letterInputRef.current.focus();
   };
 
@@ -48,7 +43,7 @@ const Game = ({
         )}
       </div>
       <div className="letterContainer">
-        <p>Tente adivnhar uma letra da palavra:</p>
+        <p>Tente adivinhar uma letra da palavra:</p>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -70,6 +65,16 @@ const Game = ({
       </div>
     </div>
   );
+};
+
+Game.propTypes = {
+  verifyLetter: PropTypes.func.isRequired,
+  pickedCategory: PropTypes.string.isRequired,
+  letters: PropTypes.arrayOf(PropTypes.string).isRequired,
+  guessedLetters: PropTypes.arrayOf(PropTypes.string).isRequired,
+  wrongLetters: PropTypes.arrayOf(PropTypes.string).isRequired,
+  guesses: PropTypes.number.isRequired,
+  score: PropTypes.number.isRequired,
 };
 
 export default Game;
